@@ -1,0 +1,39 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "gcc.exe build active file",
+            "command": "C:/cygwin64/bin/gcc.exe",
+            "args": [
+                "-g",
+                "-O0",
+                "-o",
+                "${fileBasenameNoExtension}.exe",
+                "${fileBasename}",
+                "${workspaceFolder}/function.c"
+            ],
+            "options": {},
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "shell",
+            "label": "gcc.exe build other files",
+            "command": "C:/cygwin64/bin/gcc.exe",
+            "args": [
+                "-g",
+                "-O0",
+                "-o",
+                "${fileBasenameNoExtension}.exe",
+                "${fileBasename}"
+            ],
+            "group": "build"
+        }
+    ]
+}
